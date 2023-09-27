@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+  <section class="container my-5 px-4">
+    <h1 class="text-center text-danger">YaCut</h1>
+    <p class="text-center my-4">
+      Сгенерируйте автоматическую ссылку вручную или автоматически
+    </p>
+    <div class="container">
+      <div class="row my-3">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <form method="POST" novalidate>
+            {{ form.csrf_token }}
+            {{ form.original_link(class="form-control form-control-lg py-2 mb-3", placeholder=form.original_link.label.text) }}
+            <p>
+              {% if form.original_link.errors %}
+                {% for error in form.original_link.errors %}
+                  <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+              {% endif %}
+            </p>
+            {{ form.custom_id(class="form-control form-control-lg py-2 mb-3", placeholder=form.custom_id.label.text)}}
+            <p>
+              {% if form.custom_id.errors %}
+                {% for error in form.custom_id.errors %}
+                  <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+              {% endif %}
+            </p>
+            {{ form.submit(class="btn btn-primary") }}
+          </form>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <h5 class="text-center">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  {{ message|safe }}
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+          </h5>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

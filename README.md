@@ -1,7 +1,16 @@
+YaCut - Link shortening with REST API.
+
+## Techs
+- Python
+- Flask
+- SQLAlchemy
+- Jinja2
+
+## How to use
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone 
+git clone https://github.com/zakharovvladimir/yacut.git
 ```
 
 ```
@@ -35,3 +44,5 @@ python3 -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
+
+Vladimir Zakharov // vladimir.zakharov.s@yandex.ru
