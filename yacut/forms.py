@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import SubmitField, StringField
+from wtforms import StringField, SubmitField
 from wtforms.validators import URL, DataRequired, Length, Optional, Regexp
 
 LONG_URL = 'Длинная ссылка'
@@ -12,6 +12,7 @@ SHORT_URL_PATTERN = r'^[a-zA-Z0-9_]+$'
 
 
 class UrlForm(FlaskForm):
+    """Form class for URL input."""
     original_link = StringField(LONG_URL, validators=[
         DataRequired(message=REQUIRED),
         URL(require_tld=True, message=WRONG_URL)

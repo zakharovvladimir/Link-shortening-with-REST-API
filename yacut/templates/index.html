@@ -50,6 +50,12 @@
               {% endif %}
             {% endwith %}
           </h5>
+          {% if short_url %}
+            <h5 class="text-center">
+              <a href="{{ short_url }}">{{ short_url }}</a>
+            </h5>
+          {% endif %}
+        </div>
         </div>
         <div class="col-sm">
         </div>

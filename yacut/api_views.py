@@ -1,6 +1,8 @@
-from http import HTTPStatus
 import re
+from http import HTTPStatus
+
 from flask import jsonify, request
+
 from . import app, db
 from .error_handlers import InvalidAPIUsage
 from .models import URLMap
@@ -14,7 +16,7 @@ SHORT_URL_PATTERN = re.compile(r'^[A-Za-z0-9_]{1,6}$')
 def get_original_link(short):
     """Retrieve the URLMap object."""
     urlmap = URLMap.query.filter_by(short=short).first()
-    if not urlmap:
+    if urlmap is None:
         raise InvalidAPIUsage('Указанный id не найден', HTTPStatus.NOT_FOUND)
     return jsonify(url=urlmap.original)
 
