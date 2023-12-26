@@ -1,4 +1,4 @@
-YaCut - Link shortening with REST API.
+Link shortening with REST API.
 
 ## Techs
 - Python
@@ -7,7 +7,7 @@ YaCut - Link shortening with REST API.
 - Jinja2
 
 ## How to use
-Клонировать репозиторий и перейти в него в командной строке:
+Clone the repository and navigate to it on the command line:
 
 ```
 git clone https://github.com/zakharovvladimir/yacut.git
@@ -17,25 +17,25 @@ git clone https://github.com/zakharovvladimir/yacut.git
 cd yacut
 ```
 
-Cоздать и активировать виртуальное окружение:
+Create and activate a virtual environment:
 
 ```
 python3 -m venv venv
 ```
 
-* Если у вас Linux/macOS
+* Linux/macOS
 
     ```
     source venv/bin/activate
     ```
 
-* Если у вас windows
+* Windows
 
     ```
     source venv/scripts/activate
     ```
 
-Установить зависимости из файла requirements.txt:
+Install dependencies from the requirements.txt file:
 
 ```
 python3 -m pip install --upgrade pip
