@@ -46,3 +46,6 @@ pip install -r requirements.txt
 ```
 
 Vladimir Zakharov // vladimir.zakharov.s@yandex.ru
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
